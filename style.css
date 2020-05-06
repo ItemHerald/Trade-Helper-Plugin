@@ -1,0 +1,14 @@
+.ih-button {
+    cursor: pointer;
+    transition: .2s;
+    text-align: center;
+    border-radius: 4px;
+    border: 0;
+    background-color: #001f55;
+    color: #fff;
+    width: 250px;
+    height: 60px;
+    line-height: 60px;
+    background: transparent -webkit-gradient(linear,left top,right top,from(#02c3e8),to(#1775e5));
+    background: transparent linear-gradient(90deg,#02c3e8,#1775e5);
+}
