@@ -4,13 +4,28 @@ var itemsVisible = false;
 
 
 //Prepare the automate trade button
-var button = document.createElement("button");
-$(button).addClass("ih-button");
-$(button).html("Automate trade");
+var buttonElement = document.createElement("button");
+$(buttonElement).addClass("ih-button");
+$(buttonElement).html("Automate trade");
+
+//Prepare the text
+var textElement = document.createElement("p");
+$(textElement).html("Click the button to automatically select the correct item. You will manually have to accept the trade here and on mobile.");
+
+//Prepare the itemherald content div
+var ihContentElement = document.createElement("div");
+$(ihContentElement).addClass("ih-content");
+
+//Add contents to the content div
+$(ihContentElement).append(textElement).append(buttonElement);
+
+
+
+
 
 function bindListeners() {
 	//Bind click handler to the button
-	$(button).click(() => {
+	$(buttonElement).click(() => {
 		var interval = setInterval(() => {
 			//Make sure the items are visible before searching for the to be traded item
 			if(jQuery("#trade_inventory_unavailable").css('display') != "block") {
@@ -31,15 +46,17 @@ function bindListeners() {
 
 jQuery(document).ready(() => {
 	var params = window.location.search;
-
-	var itemIdParam = params.split("&")[1];
-	if(itemIdParam.startsWith("item=")) {
-		itemId = itemIdParam.split("=")[1];
-		console.log("Item id is", itemId);
-
-		//Add the automate trade button
-		$(".pagecontent").prepend(button);
-		bindListeners();
-	}
+	var itemIdParams = params.split("&");
+	itemIdParams.forEach(param => {
+		if(param.startsWith("item=")) {
+			itemId = param.split("=")[1];
+			console.log("Item id is", itemId);
+	
+			//Add the automate trade button
+			$(".pagecontent").prepend(ihContentElement);
+			bindListeners();
+		}
+	});
+	
 })
 
