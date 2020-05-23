@@ -16,8 +16,7 @@
                 "*://*.steamcommunity.com/tradeoffer/new/*"
             ],
             "js": [
-                "dep/jquery-3.5.1.min.js",
-                "inject.js"
+                "highlighter.js"
             ],
             "css": [
                 "style.css"
