@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://itemherald.com/">
+    <img src="https://itemherald.com/assets/logo.svg"/>
+  </a>
+</p>
+
 # Helps you make peer to peer Steam trades via ItemHerald
 
 This extension will help you make peer to peer trades on ItemHerald via the Steam platform, by highlighting the item that should be traded.
