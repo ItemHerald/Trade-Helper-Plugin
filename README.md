@@ -2,6 +2,8 @@
 
 This extension will help you make peer to peer trades on ItemHerald via the Steam platform, by highlighting the item that should be traded.
 This plugin only works if the trade is initiated via ItemHerald.com.
+
+Visit [ItemHerald](https://www.itemherald.com "ItemHerald")
 # How to install
 There are two ways to install the extension. Currently the extension is only available on Chrome.
 ## Via the browser
